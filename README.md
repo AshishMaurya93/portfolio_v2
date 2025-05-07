@@ -63,7 +63,7 @@
 
 ## 🌙 Styling & Theme
 
-- Default **dark theme** with light/dark **toggle switch**.
+- Default **dark theme**.
 - Styled with **Tailwind CSS**, enhanced by:
   - **Glassmorphism**
   - **Soft shadows**
