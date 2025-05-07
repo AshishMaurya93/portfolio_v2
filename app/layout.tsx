@@ -12,7 +12,7 @@ const geist = Geist({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Ashish Maurya | Front-End Developer",
   description: "Portfolio showcasing Ashish Maurya's front-end development work and projects",
-    generator: 'v0.dev'
+    generator: 'Ashish Maurya',
 }
 
 export default function RootLayout({
