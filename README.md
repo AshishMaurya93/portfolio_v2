@@ -1,6 +1,6 @@
 # ✨ Portfolio v2 — Next.js UI/UX Designer Portfolio
 
-![Preview Banner](https://raw.githubusercontent.com/AshishMaurya93/mystic-brews/main/public/images/site-preview.png) <!-- Replace with an actual image link or remove -->
+![Preview Banner](https://raw.githubusercontent.com/AshishMaurya93/portfolio_v2/main/public/images/site-preview.png) <!-- Replace with an actual image link or remove -->
 
 > A high-end, interactive, and immersive UI/UX design portfolio built with **Next.js**, **TypeScript**, and powered by **Framer Motion**, **GSAP**, and **Three.js** for stunning visuals and buttery-smooth animations.
 
