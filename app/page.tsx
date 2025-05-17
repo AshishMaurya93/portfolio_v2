@@ -80,12 +80,38 @@ export default function Home() {
   const skillsRef = useRef(null)
   const statsRef = useRef(null)
   const [selectedProject, setSelectedProject] = useState(null)
+  const [typedText, setTypedText] = useState("")
+  const fullName = "Ashish Maurya"
+  const typingSpeed = 150 // ms per character
+  const cursorBlinkRef = useRef(null)
 
   useEffect(() => {
     if (isInView) {
       controls.start("visible")
+
+      // Start typing animation after a delay
+      const typingTimeout = setTimeout(() => {
+        let currentIndex = 0
+        const typingInterval = setInterval(() => {
+          if (currentIndex <= fullName.length) {
+            setTypedText(fullName.substring(0, currentIndex))
+            currentIndex++
+          } else {
+            clearInterval(typingInterval)
+
+            // Start cursor blinking after typing is complete
+            if (cursorBlinkRef.current) {
+              cursorBlinkRef.current.classList.add("cursor-blink")
+            }
+          }
+        }, typingSpeed)
+
+        return () => clearInterval(typingInterval)
+      }, 1000)
+
+      return () => clearTimeout(typingTimeout)
     }
-  }, [controls, isInView])
+  }, [controls, isInView, fullName])
 
   // GSAP animations
   useEffect(() => {
@@ -166,7 +192,12 @@ export default function Home() {
               </span>
             </motion.div>
             <motion.h1 variants={itemVariants} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              Hi, I'm <span className="gradient-text">Ashish Maurya</span>
+              Hi, I'm{" "}
+              <span className="typing-container">
+                <span className="aurora-text">{typedText}</span>
+                <span ref={cursorBlinkRef} className="typing-cursor">
+                </span>
+              </span>
             </motion.h1>
             <motion.p variants={itemVariants} className="text-lg md:text-xl text-muted-foreground max-w-2xl">
               A results-driven Front-End Developer with 2 years of experience in designing, developing, and deploying

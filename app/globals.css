@@ -247,3 +247,78 @@
 .filter-button:not(.active) {
   @apply bg-secondary text-foreground hover:bg-primary/20 hover:text-primary;
 }
+
+/* Typing effect styles */
+.typing-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.typing-role {
+  color: #ec4899;
+  font-weight: bold;
+}
+
+.aurora-text {
+  position: relative;
+  background: linear-gradient(to right, #7c3aed, #ec4899, #7c3aed);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.aurora-text::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(to right, rgba(124, 58, 237, 0.2), rgba(236, 72, 153, 0.2));
+  filter: blur(20px);
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0.7;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background-color: #8f45f1;
+  animation: none;
+  opacity: 0;
+}
+
+.cursor-blink {
+  animation: cursor-blink 0.8s step-end infinite;
+  opacity: 1;
+}
+
+@keyframes cursor-blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
