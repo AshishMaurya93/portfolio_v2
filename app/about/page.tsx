@@ -6,7 +6,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { FileText, ArrowRight, Calendar, MapPin, GraduationCap, Briefcase } from "lucide-react"
+import { FileText, ArrowRight, Calendar, MapPin, GraduationCap, Briefcase, Code2 } from "lucide-react"
 
 // Initialize GSAP plugins
 if (typeof window !== "undefined") {
@@ -16,83 +16,141 @@ if (typeof window !== "undefined") {
 // Skills data
 const skills = [
   "React.js",
-  "Redux",
   "Next.js",
   "Node.js",
   "JavaScript",
-  "Bootstrap",
-  "CSS3",
   "HTML5",
-  "CMS",
-  "Figma",
+  "CSS3",
+  "Bootstrap",
+  "Tailwind CSS",
   "Git",
-  "jQuery",
-  "Front-end",
-  "Oracle",
-  "SEO",
-  "SQL",
   "SVN",
+  "Oracle",
+  "SQL",
+  "MySQL",
+  "Figma",
   "UI/UX Design",
+  "SEO",
+  "Jenkins",
+  "TensorFlow",
+  "Python",
+  "AWS S3",
+  "Redis",
+  "Express.js",
 ]
 
 // Education data
 const education = [
   {
-    degree: "Master of Computer Applications (MCA)",
+    degree: "Master of Computer Application in Computer Applications",
     institution: "Centre For Development Of Advanced Computing",
-    period: "August 2017 - July 2020",
-    location: "Noida",
+    period: "2017 - 2020",
+    location: "Noida, India",
   },
   {
-    degree: "Bachelor of Computer Applications (BCA)",
+    degree: "Bachelor of Computer Application in Computer Applications",
     institution: "Indira Gandhi National Open University",
-    period: "July 2012 - December 2016",
-    location: "New Delhi",
+    period: "2012 - 2016",
+    location: "New Delhi, India",
   },
   {
     degree: "Senior Secondary (XII)",
     institution: "Andhra Education Society School",
-    period: "January 2012 - December 2012",
-    location: "New Delhi",
+    period: "2012",
+    location: "New Delhi, India",
   },
 ]
 
-// Experience data
+// Work Experience data
 const experience = [
   {
     role: "Junior Software Developer",
-    company: "Opalina Technologies Pvt. Ltd",
-    period: "May 2022 - March 2024",
-    location: "Noida, India",
-    description: [
-      "Developed and optimized the Narendra Modi Mother Project, reducing page load time by 40%.",
-      "Built and managed landing pages, leading to a 25% increase in visitor engagement.",
-      "Implemented a CMS for seamless content updates, decreasing update time by 50%.",
-      "Developed and enhanced DKSCORE, improving responsiveness and reducing bounce rate by 30%.",
-      "Executed SEO strategies, boosting organic traffic by 30% within six months.",
-      "Managed DKSCORE CMS for 2 years, optimizing workflows.",
-      "Designed and built a media center, increasing user retention by 20%.",
-      "Engineered JyotishMedium, leading to a 25% increase in content contributions.",
+    company: "Opalina Technologies Pvt Ltd",
+    period: "May 2022 - April 2024",
+    location: "Noida, India (Remote)",
+    projects: [
+      {
+        name: "Narendra Modi Mother Project",
+        url: "https://www.narendramodi.in/mother",
+        achievements: [
+          "Developed and optimized the project using HTML5, CSS3, JavaScript, and React.js reducing page load time by 40%",
+          "Built and managed landing pages with Bootstrap and jQuery, leading to a 25% increase in visitor engagement",
+          "Implemented Next.js as the CMS for seamless content updates, decreasing update time by 50%",
+          "Collaborated with cross-functional teams using Figma and Adobe XD to ensure brand consistency and UI/UX alignment",
+          "Conducted regular performance audits with Google Lighthouse and implemented caching strategies using Redis",
+          "Integrated Google Analytics (Gtag) to monitor user behavior and support data-driven improvements",
+          "Ensured cross-browser compatibility and mobile responsiveness using responsive design best practices",
+        ],
+      },
+      {
+        name: "DKSCORE",
+        url: "https://www.dkscore.com/",
+        achievements: [
+          "Developed and enhanced DKSCORE using React.js, Node.js, improving responsiveness and reducing bounce rate by 30%",
+          "Executed SEO strategies including structured data and metadata optimization, boosting organic traffic by 30% within six months",
+          "Managed a custom-built CMS using Next.js, Express.js and MySQL for 2 years, optimizing editorial workflows",
+          "Designed and built a media center with AWS S3, increasing user retention by 20%",
+          "Engineered JyotishMedium using Next.js and Vector DB using Pinecone, leading to a 25% increase in content contributions",
+          "Introduced Python-based automation scripts with cron jobs to streamline content publishing and system maintenance",
+          "Added AI related features for matching Kundalis, better predictions on Dasha and AI auto description features using ChatGPT API integrations",
+          "Led UI/UX redesign initiatives using Tailwind CSS and React Hooks, resulting in improved usability and engagement",
+          "Worked closely with stakeholders using Jira and Notion to gather requirements and deliver timely feature updates",
+        ],
+      },
     ],
   },
 ]
 
-// Training data
-const training = [
+// Academic Projects data
+const academicProjects = [
+  {
+    title: "Flower Recognition System",
+    period: "May 2018 - December 2019",
+    description:
+      "Developed an Android application using TensorFlow Lite and neural network models to recognize and classify various types of flowers using the mobile camera.",
+    technologies: ["TensorFlow Lite", "Python", "Keras", "Android Studio", "Java", "OpenCV", "Material Design"],
+    achievements: [
+      "Integrated Google Camera API and OpenCV for real-time image capture and preprocessing",
+      "Trained custom CNN models using Python and Keras, optimized for mobile inference",
+      "Deployed the model to Android using Android Studio with Java, achieving high accuracy in flower identification",
+      "Implemented a lightweight UI using Material Design principles for better usability and performance on low-end devices",
+      "Performed rigorous model testing and dataset augmentation to improve recognition reliability across different lighting conditions",
+    ],
+  },
+  {
+    title: "Web-Based Mobile Store Management System",
+    period: "August 2014 - March 2015",
+    description:
+      "Developed a full-stack web application for mobile phone search, comparison, and purchase using MySQL, HTML5, CSS3, and JavaScript.",
+    technologies: ["MySQL", "HTML5", "CSS3", "JavaScript", "Bootstrap", "AJAX", "jQuery"],
+    achievements: [
+      "Implemented product filtering, search functionality, and dynamic comparison features to enhance user experience",
+      "Designed a responsive UI with Bootstrap for seamless access across desktop and mobile browsers",
+      "Integrated an admin dashboard for inventory management, sales tracking, and product updates",
+      "Used AJAX and jQuery to ensure smooth user interactions and dynamic content loading",
+      "Ensured database normalization and optimized queries for fast product retrieval and comparisons",
+    ],
+  },
+]
+
+// Certifications data
+const certifications = [
+  {
+    title: "Certification in UI/UX Design",
+    institution: "Internshala Trainings",
+    date: "April 2021",
+  },
   {
     title: "Oracle Workforce Development Program",
-    courses: [
-      "Oracle Database 10g: Introduction to SQL",
-      "Oracle Database 10g: PL/SQL Fundamentals",
-      "Oracle Database 10g: Database Administration Workshop",
-    ],
+    institution: "NIIT",
+    date: "August 2014",
   },
 ]
 
 export default function AboutPage() {
   const skillsRef = useRef(null)
   const timelineRef = useRef(null)
-  const bioRef = useRef(null)
+  const projectsRef = useRef(null)
 
   // Initialize GSAP animations
   useEffect(() => {
@@ -110,6 +168,27 @@ export default function AboutPage() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: timelineRef.current,
+            start: "top bottom-=100",
+            toggleActions: "play none none none",
+          },
+        },
+      )
+    }
+
+    if (projectsRef.current) {
+      const projectItems = projectsRef.current.querySelectorAll(".project-item")
+
+      gsap.fromTo(
+        projectItems,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: projectsRef.current,
             start: "top bottom-=100",
             toggleActions: "play none none none",
           },
@@ -134,9 +213,9 @@ export default function AboutPage() {
               I'm <span className="gradient-text">Ashish Maurya</span>
             </h1>
             <p className="text-muted-foreground mb-6">
-              A results-driven Front-End Developer with 2 years of experience in designing, developing, and deploying
-              dynamic web applications. My expertise spans React.js, Next.js, and Node.js, where I focus on building
-              user-centric interfaces and enhancing performance.
+              I am a results-driven Front-End Developer with 2 years of experience in designing, developing, and
+              deploying dynamic web applications. My expertise spans React.js, Next.js, and Node.js, where I focus on
+              building user-centric interfaces and enhancing performance.
             </p>
             <p className="text-muted-foreground mb-8">
               I thrive in collaborative environments, leveraging modern technologies and SEO strategies to ensure
@@ -150,7 +229,7 @@ export default function AboutPage() {
                 </Link>
               </Button>
               <Button asChild variant="outline">
-                <a href="/resume-ashish-maurya.pdf" download="Ashish_Maurya_Resume.pdf">
+                <a href="/resume_ashish_maurya(updated).pdf" download="Ashish_Maurya_Resume.pdf">
                   <FileText className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
@@ -196,13 +275,20 @@ export default function AboutPage() {
               <div className="pt-4">
                 <h3 className="font-medium mb-2">Languages</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="text-sm bg-secondary px-3 py-1 rounded-full">English (Native)</span>
                   <span className="text-sm bg-secondary px-3 py-1 rounded-full">Hindi (Native)</span>
+                  <span className="text-sm bg-secondary px-3 py-1 rounded-full">English (Fluent)</span>
                 </div>
               </div>
               <div className="pt-4">
-                <h3 className="font-medium mb-2">Interests</h3>
-                <p className="text-muted-foreground">Badminton, Football, Piano</p>
+                <h3 className="font-medium mb-2">Portfolio</h3>
+                <a
+                  href="https://portfolio-v2-khaki-sigma.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline text-sm"
+                >
+                  portfolio-v2-khaki-sigma.vercel.app
+                </a>
               </div>
             </div>
           </motion.div>
@@ -265,17 +351,86 @@ export default function AboutPage() {
                       {job.period}
                     </div>
                   </div>
-                  <div className="flex items-center text-sm text-muted-foreground mb-4">
+                  <div className="flex items-center text-sm text-muted-foreground mb-6">
                     <MapPin className="h-4 w-4 mr-1" />
                     {job.location}
                   </div>
-                  <ul className="space-y-2 list-disc pl-5">
-                    {job.description.map((item, i) => (
-                      <li key={i} className="text-muted-foreground">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+
+                  {job.projects.map((project, projectIndex) => (
+                    <div key={projectIndex} className="mb-8 last:mb-0">
+                      <div className="flex items-center gap-2 mb-3">
+                        <h4 className="text-lg font-semibold">{project.name}</h4>
+                        {project.url && (
+                          <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline text-sm"
+                          >
+                            ({project.url})
+                          </a>
+                        )}
+                      </div>
+                      <ul className="space-y-2 list-disc pl-5">
+                        {project.achievements.map((achievement, i) => (
+                          <li key={i} className="text-muted-foreground text-sm">
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div ref={projectsRef} className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">
+              Academic <span className="gradient-text">Projects</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Key projects completed during my academic journey, showcasing technical skills and innovation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {academicProjects.map((project, index) => (
+              <div key={index} className="project-item">
+                <div className="bg-card p-6 rounded-lg border border-border h-full">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <Code2 className="h-6 w-6 text-primary" />
+                    </div>
+                    <span className="text-sm text-muted-foreground">{project.period}</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
+
+                  <div className="mb-4">
+                    <h4 className="font-medium mb-2">Technologies Used:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="text-xs bg-secondary px-2 py-1 rounded-full">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-medium mb-2">Key Achievements:</h4>
+                    <ul className="space-y-1 list-disc pl-5">
+                      {project.achievements.map((achievement, achievementIndex) => (
+                        <li key={achievementIndex} className="text-muted-foreground text-sm">
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
@@ -285,10 +440,10 @@ export default function AboutPage() {
         <div className="mb-24">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              <span className="gradient-text">Education</span> & Training
+              <span className="gradient-text">Education</span> & Certifications
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              My academic background and professional development.
+              My academic background and professional certifications.
             </p>
           </div>
 
@@ -325,10 +480,10 @@ export default function AboutPage() {
             <div>
               <h3 className="text-xl font-bold mb-6 flex items-center">
                 <Briefcase className="mr-2 h-5 w-5 text-primary" />
-                Training & Courses
+                Certifications
               </h3>
               <div className="space-y-6">
-                {training.map((train, index) => (
+                {certifications.map((cert, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -336,14 +491,12 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="bg-card p-6 rounded-lg border border-border"
                   >
-                    <h4 className="text-lg font-bold mb-4">{train.title}</h4>
-                    <ul className="space-y-2 list-disc pl-5">
-                      {train.courses.map((course, i) => (
-                        <li key={i} className="text-muted-foreground">
-                          {course}
-                        </li>
-                      ))}
-                    </ul>
+                    <h4 className="text-lg font-bold mb-2">{cert.title}</h4>
+                    <p className="text-primary mb-2">{cert.institution}</p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {cert.date}
+                    </div>
                   </motion.div>
                 ))}
               </div>
